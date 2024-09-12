@@ -1,24 +1,24 @@
-print("Welcome to a simple Calculator")
+print("Welcome to a simple Calculator\n")
 
 
 def Add(n1, n2):
-    result = n1 + n2
-    print(result) 
+    result = round((n1 + n2), 2)
+    print("\nThe result is: ",result) 
 
 def Sub(n1, n2):
-    result = n1 - n2
-    print(result)
+    result = round((n1 - n2), 2)
+    print("\nThe result is: ",result) 
 
 def Mult(n1, n2):
-    result = n1 * n2
-    print(result)
+    result = round((n1 * n2), 2)
+    print("\nThe result is: ",result) 
 
 def Div(n1, n2):
-    result = n1 / n2
-    print(result)
+    result = round((n1 / n2), 2)
+    print("\nThe result is: ",result) 
 
 while True:
-    print("Choose an Operation:-")
+    print("\n\nChoose an Operation:-")
     print("1. Addition")
     print("2. Subtraction")
     print("3  Multiplication")
