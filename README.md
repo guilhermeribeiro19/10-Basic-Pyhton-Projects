@@ -1,5 +1,5 @@
-# 10-Basic-Pyhton-Projects
-A repo where I implement 10 basic python projetcs
+# 10-Pyhton-Projects
+A repo where I implement 10 fun and creative python projetcs, each one increasing the level of dificulty
 
 ## Projects
 1. Calculator (calculator.py)
