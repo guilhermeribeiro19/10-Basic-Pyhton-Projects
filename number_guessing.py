@@ -9,7 +9,7 @@ print("\nWelcome to the Try to Guess the Number Game!")
 
 
 while True:
-    choice = input("\nDo you want to Guess the Number?  ")
+    choice = input("\nDo you want to Guess the Number? (y/n) ")
 
     number_to_guess = get_random_number()
     chances = 5
@@ -25,14 +25,17 @@ while True:
                 break
 
             elif guess < number_to_guess:
-                print("The number you choose is lower than the number we choose, try again...")
+                print("\nThe number you choose is lower than the number we choose, try again...")
 
             elif guess > number_to_guess:
-                print("The number you choose is higher than the number we choose, try again...")
+                print("\nThe number you choose is higher than the number we choose, try again...")
+
+            elif guess > 100:
+                print("Invalid input...please try again")
 
             chances -= 1
 
-        print("You lost, feel free to try again!")
+            print("You lost, feel free to try again!")
 
     elif choice == "n":
         print("\nExiting...")
