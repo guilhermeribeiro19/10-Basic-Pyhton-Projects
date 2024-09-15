@@ -25,32 +25,32 @@ print("\nWelcome to the Rock, Paper, Scissors Game!")
 while True:
     choice = input("Do you want to play Rock, Paper, Scissors? (y/n)  ")
 
-    if choice == "y":
+    if choice.lower() == "y":
         computer_move = get_computer_move()
-        while 1:
+        while True:
             move = input("What move do you choose: (r/p/s)  ").lower()
-            print(f"The computers move is: {computer_move}")
-            if "r" in move or "p" in move or "s" in move:
-                if 'r' in move:
+            print(f"The computer's move is: {computer_move}")
+            if move in ['r', 'p', 's']:
+                if move == 'r':
                     user_move = rock
-                elif 'p' in move:
+                elif move == 'p':
                     user_move = paper
-                elif 's' in move:
+                elif move == 's':
                     user_move = scissor
-                print(f"The users move is: {user_move}")
-                if find_winner(user_move, computer_move) == 1:
-                    print("\nUser Won !")
-                elif find_winner(user_move, computer_move) == -1:
-                    print("\nComputer Won !")
+                print(f"The user's move is: {user_move}")
+                result = find_winner(user_move, computer_move)
+                if result == 1:
+                    print("\nUser Won!")
+                elif result == -1:
+                    print("\nComputer Won!")
                 else:
-                    print("\nIt's a Tie !")
+                    print("\nIt's a Tie!")
                 break
             else:
                 print("Invalid input...please try again")
-    elif 'n' in choice.lower():
+    elif choice.lower() == 'n':
         print("Exiting...")
         break
     else:
         print('Invalid input...please try again')
     print()
-
